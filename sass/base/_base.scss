@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: solid 1px red;
+}
+
+html {
+  font-size: 62.5%; // 10px
+}
+
+body {
+  // min-height: 100vh;
+  min-height: 100vh;
+  // box-sizing: border-box;
+  // min-width: $maxWidth;
+  background-color: $colorPrimary;
+  overflow-x: hidden;
+
+  @include respond(tab-port-3) {
+    max-width: 100%;
+  }
+}
+.body--home__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 25.1rem;
+  // justify-content: space-between;
+  // TABLET
+  @include respond(tab-port-3) {
+    gap: 10.6rem;
+  }
+  @include respond(phone) {
+    gap: 4.8rem;
+  }
+}
+
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

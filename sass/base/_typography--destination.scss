@@ -1,0 +1,87 @@
+.main--destination__description {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  &__list {
+    list-style-type: none;
+
+    font-family: $fontFamilyBarlowCond;
+
+    font-size: $fontSize-2;
+    line-height: 1.9rem;
+    letter-spacing: $letterSpacing-2;
+  }
+  &__link {
+    text-decoration: none;
+    color: $colorSecondary;
+  }
+
+  &__info__text {
+    font-family: $fontFamilyBarlowCond;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 2.3625px;
+    color: $colorSecondary;
+  }
+
+  &__info__numbers {
+    font-family: $fontFamilyBellefair;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    color: $colorTertiary;
+  }
+}
+
+.main--destination {
+  &__heading__span {
+    font-weight: bold;
+    opacity: 0.25;
+  }
+
+  &__heading--1 {
+    font-size: calc(56px + 44 * (100vw / 1440));
+    line-height: 11.5rem;
+  }
+}
+
+/////////////////////////////////////////////////////
+// TABLET
+.main--destination {
+  &__heading--5 {
+    @include respond(tab-port-3) {
+      text-align: start;
+    }
+  }
+
+  &__heading--1 {
+    @include respond(tab-port-3) {
+      line-height: 9.2rem;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////
+// PHONE
+.main--destination__description {
+  &__list {
+    @include respond(phone) {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      letter-spacing: 2.3625px;
+    }
+  }
+}
+.main--destination {
+  &__heading--5 {
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__heading--1 {
+    @include respond(phone) {
+      font-size: 5.6rem;
+      line-height: 6.4rem;
+    }
+  }
+}

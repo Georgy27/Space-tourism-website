@@ -1,0 +1,156 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $widthNav;
+  height: $heightNav;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(1.5rem);
+  position: relative;
+  // overflow: hidden;
+  padding-right: 165px;
+  padding-left: 123px;
+
+  &__list {
+    display: flex;
+
+    @include respond(small-desktop) {
+      max-width: 542px;
+    }
+  }
+  &__item {
+    margin-right: 48px;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &__link {
+    display: flex;
+    gap: 11px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    // width: 473px;
+    width: calc(0px + (900-0) * ((100vw - 100%) / (1920 - 500)));
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 96%;
+    background: $colorTertiary;
+    opacity: 0.25;
+
+    @include respond(tab-port-1) {
+      width: calc(0rem + (400-0) * ((100vw - 100%) / (1920 - 500)));
+    }
+
+    @include respond(tab-port-3) {
+      width: 0;
+    }
+  }
+}
+.navigation {
+  // @include respond(small-desktop) {
+  //   padding-left: calc(48px + (123 - 48) * (1440-768));
+  // }
+  @include respond(tab-port-1) {
+    max-width: 67rem;
+    padding-left: 48px;
+    padding-right: 46px;
+  }
+}
+/////////////////////////////////////////////////////////////
+// TABLET
+
+.navigation {
+  @include respond(tab-port-3) {
+    max-width: 450px;
+  }
+  @include respond(tab-port-4) {
+    // hide navigation
+    transform: translate(100%);
+    display: none;
+  }
+
+  &__list {
+    @include respond(tab-port-3) {
+      max-width: 35.6rem;
+      height: 1.8rem;
+    }
+  }
+
+  &__item {
+    @include respond(tab-port-3) {
+      margin-right: 4rem;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  &__span {
+    @include respond(tab-port-3) {
+      display: none;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////
+//PHONE
+.navigation {
+  @include respond(tab-port-4) {
+    padding: 0px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    // width: 254px;
+    width: 67.7%;
+    // height: 667px;
+    height: 100%;
+    transform: translate(100%);
+  }
+
+  &__list {
+    @include respond(tab-port-4) {
+      // display: flex;
+      // flex-direction: column;
+      margin-top: 118px;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__item {
+    @include respond(tab-port-4) {
+      margin-right: 0px;
+      margin-bottom: 35px;
+      margin-left: 32px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  &__span {
+    @include respond(tab-port-4) {
+      display: inline-block;
+    }
+  }
+}
+
+// show sidebar-navigation
+
+.show-sidebar {
+  transform: translate(0);
+  transition: transform 500ms ease-in-out;
+}

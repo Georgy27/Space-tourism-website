@@ -1,0 +1,65 @@
+.main__btn {
+  max-width: 27.4rem;
+  // height: 27.4rem;
+
+  &--large {
+    // display: inline-block;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: $colorTertiary;
+    width: 27.4rem;
+    height: 27.4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    // animation-name: white-circle-shrinking;
+    // animation-duration: 800ms;
+    // animation-fill-mode: forwards;
+  }
+
+  &--large:hover::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: $colorTertiary;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    -webkit-animation: white-circle-expanding 2s alternate;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  &--large::after {
+    -webkit-animation: white-circle-shrinking 2s alternate;
+    -webkit-animation-fill-mode: forwards;
+  }
+}
+///////////////////////////////////////////////////////////
+// TABLET
+
+.main__btn {
+  &--large {
+    @include respond(tab-port-3) {
+      width: 24.2rem;
+      height: 24.2rem;
+    }
+  }
+}
+///////////////////////////////////////////////////////////
+// PHONE
+.main__btn {
+  &--large {
+    @include respond(phone) {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+}

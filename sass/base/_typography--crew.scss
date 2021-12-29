@@ -1,0 +1,61 @@
+.main--crew {
+  &__heading--4 {
+    color: $colorTertiary;
+    font-weight: 400;
+    letter-spacing: 0;
+    opacity: 0.5;
+    @include adaptive-font(32, 16);
+  }
+
+  &__heading--1 {
+    @include adaptive-font(56, 24);
+    line-height: 64px;
+  }
+}
+////////////////////////////////////////////////////////////////
+// TABLET
+
+.main--crew {
+  &__heading--4 {
+    @include respond(tab-port-3) {
+      line-height: 2.8rem;
+      @include adaptive-font(38, 16);
+    }
+  }
+  &__description,
+  &__heading--1 {
+    @include respond(tab-port-3) {
+      text-align: center;
+    }
+  }
+
+  &__heading--1 {
+    @include respond(tab-port-3) {
+      line-height: 4.6rem;
+      @include adaptive-font(67, 24);
+    }
+  }
+
+  // &__heading--5 {
+  //   @include respond(tab-port-4) {
+  //     text-align: center;
+  //   }
+  // }
+}
+
+/////////////////////////////////////////////////////////////////
+// MOBILE
+
+.main--crew {
+  &__heading--4 {
+    @include respond(phone) {
+      line-height: 1.8rem;
+    }
+  }
+
+  &__heading--1 {
+    @include respond(phone) {
+      line-height: 27.5px;
+    }
+  }
+}

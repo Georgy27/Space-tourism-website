@@ -1,0 +1,26 @@
+.main--technology {
+  max-width: 89%;
+  height: 58.7rem;
+  @include respond(mini-desktop) {
+    margin-left: 10rem;
+    max-width: 127.3rem;
+  }
+  @include respond(tab-port-2) {
+    margin-left: 2rem;
+  }
+
+  @include respond(tab-port-3) {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+/////////////////////////////////////////
+//PHONE
+
+.main--technology {
+  @include respond(phone) {
+    margin-right: 0;
+    margin-top: 2.4rem;
+  }
+}

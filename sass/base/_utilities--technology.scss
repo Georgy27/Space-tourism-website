@@ -1,0 +1,82 @@
+.dots--technology {
+  margin-top: 0;
+  order: -10;
+  width: 8rem;
+  height: 30.4rem;
+  
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  &__item {
+    opacity: 1;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__item__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $colorTertiary;
+  }
+
+  &__item__link--black {
+    color: black;
+  }
+}
+
+.white--dot {
+  opacity: 1;
+  background-color: $colorTertiary;
+}
+
+///////////////////////////////////////////////////////////
+//TABLET
+.dots--technology {
+  @include respond(tab-port-3) {
+    width: 21rem;
+    height: 6rem;
+  }
+  &__list {
+    @include respond(tab-port-3) {
+      flex-direction: row;
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    @include respond(tab-port-3) {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////
+// PHONE
+
+.dots--technology {
+  @include respond(phone) {
+    width: 15.2rem;
+    height: 4rem;
+    margin-bottom: 2.6rem;
+  }
+  &__list {
+    @include respond(phone) {
+      gap: 1.6rem;
+    }
+  }
+  &__item {
+    @include respond(phone) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

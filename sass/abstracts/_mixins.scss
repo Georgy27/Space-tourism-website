@@ -1,0 +1,58 @@
+//typography
+$maxWidth: 1440;
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 375;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth})
+  );
+}
+
+// media query
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 415px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port-4 {
+    @media (max-width: 550px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port-3 {
+    @media (max-width: 780px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port-2 {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port-1 {
+    @media (max-width: 1020px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mini-desktop {
+    @media (max-width: 1320px) {
+      @content;
+    }
+  }
+  @if $breakpoint == small-desktop {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}

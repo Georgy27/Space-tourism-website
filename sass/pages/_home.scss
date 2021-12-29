@@ -1,0 +1,25 @@
+.body--home {
+  background: url("/assets/home/background-home-desktop.jpg") center top / cover
+    no-repeat;
+  // background-size: 100% auto;
+}
+
+////////////////////////////////////////////////////////////////
+// TABLET
+
+.body--home {
+  @include respond(tab-port-3) {
+    background: url("/assets/home/background-home-tablet.jpg") center top /
+      cover no-repeat;
+  }
+}
+
+/////////////////////////////////////////////////////
+// PHONE
+
+.body--home {
+  @include respond(phone) {
+    background: url("/assets/home/background-home-mobile.jpg") center center /
+      cover no-repeat;
+  }
+}

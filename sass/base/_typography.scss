@@ -1,0 +1,131 @@
+body {
+  font-family: $fontFamilyBarlowCond;
+  color: $colorTertiary; //white
+  font-size: $fontSize-1;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.navigation {
+  &__list {
+    list-style-type: none;
+    font-family: $fontFamilyBarlowCond;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: $letterSpacing-2;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    color: $colorTertiary; //white
+  }
+
+  &__span {
+    font-weight: bold;
+  }
+}
+
+.main {
+  &__heading--5 {
+    font-family: $fontFamilyBarlowCond;
+    font-weight: normal;
+    @include adaptive-font(28, 16);
+    line-height: 3.4rem;
+    letter-spacing: $letterSpacing-3;
+    color: $colorSecondary;
+    text-transform: uppercase;
+  }
+
+  &__heading--1 {
+    font-family: $fontFamilyBellefair;
+    font-size: calc(80px + 70 * (100vw / 1440));
+    line-height: 17.2rem;
+    text-transform: uppercase;
+  }
+
+  &__heading--4 {
+    font-family: $fontFamilyBellefair;
+    font-size: $fontSize-5;
+    line-height: 3.7rem;
+    letter-spacing: $letterSpacing-1;
+    color: $colorPrimary;
+    text-transform: uppercase;
+  }
+
+  &__body-text {
+    text-transform: none;
+    font-family: $fontFamilyBarlow;
+    // font-size: 1.8rem;
+    // font-size: calc(15px + 3 * (100vw / 1440));
+    @include adaptive-font(18, 15);
+    line-height: 3.2rem;
+    color: $colorSecondary;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+.navigation {
+  &__list {
+    @include respond(tab-port-3) {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      letter-spacing: 2.3625px;
+    }
+  }
+}
+.main {
+  &__heading--5 {
+    @include respond(tab-port-3) {
+      line-height: 2.4rem;
+      text-align: center;
+      letter-spacing: 3.375px;
+    }
+  }
+  &__heading--1 {
+    @include respond(tab-port-3) {
+      font-size: calc(80px + 70 * (100vw / 768));
+      line-height: 15rem;
+      text-align: left;
+    }
+  }
+
+  &__body-text {
+    @include respond(tab-port-3) {
+      line-height: 2.8rem;
+    }
+  }
+}
+//////////////////////////////////////////////////////////
+// MOBILE
+
+.main {
+  &__heading--5 {
+    @include respond(phone) {
+      line-height: 1.9rem;
+      letter-spacing: 2.7px;
+    }
+  }
+  &__heading--1 {
+    @include respond(phone) {
+      font-size: calc(60px + 20 * (100vw / 375));
+      line-height: 10rem;
+      text-align: center;
+    }
+  }
+
+  &__body-text {
+    @include respond(phone) {
+      line-height: 2.5rem;
+    }
+  }
+  // btn
+  &__heading--4 {
+    @include respond(phone) {
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+  }
+}

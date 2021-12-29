@@ -1,0 +1,101 @@
+.color--secondary {
+  color: $colorSecondary;
+}
+
+// UNDERLINE
+.active {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -39px;
+    left: 0px;
+    height: 3px;
+    width: 100%;
+    background-color: $colorTertiary;
+  }
+}
+// hover effect
+
+.navigation {
+  &__item {
+    &:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -39px;
+      left: 0px;
+      height: 3px;
+      width: 100%;
+      background-color: $colorTertiary;
+
+      opacity: 0.5;
+    }
+    // &:first-child:hover::after {
+    //   opacity: 1;
+    // }
+  }
+}
+// active class always need to have an opacity of 1
+.active:hover::after {
+  opacity: 1;
+}
+
+// hide close-btn
+.navigation {
+  &__close--btn {
+    display: none;
+    width: 19.09px;
+    height: 19.09px;
+    color: #d0d6f9;
+    position: absolute;
+    top: 33.95px;
+    right: 26.45px;
+    background: transparent;
+    border: 0px;
+  }
+
+  // hide burger
+  &--burger {
+    display: none;
+  }
+}
+
+//////////////////////////////////////////////
+// MOBILE
+
+// Underline
+.active {
+  &::after {
+    @include respond(tab-port-4) {
+      bottom: -10px;
+    }
+  }
+}
+
+.navigation {
+  &__item {
+    &:hover::after {
+      @include respond(tab-port-4) {
+        bottom: -10px;
+      }
+    }
+  }
+  // show burger
+  &--burger {
+    @include respond(tab-port-4) {
+      display: inline-block;
+      width: 2.4rem;
+      height: 2.1rem;
+      color: #d0d6f9;
+      margin-right: 2.4rem;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  // Show close btn
+  &__close--btn {
+    @include respond(tab-port-4) {
+      display: inline-block;
+    }
+  }
+}

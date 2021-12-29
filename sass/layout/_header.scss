@@ -1,0 +1,52 @@
+.header {
+  margin-left: 5.5rem;
+  &__content {
+    margin-top: 4rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+  }
+
+  &__logo-box {
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+///////////////////////////////////////////////////////////
+// TABLET
+
+.header {
+  @include respond(tab-port-3) {
+    max-width: 73.3rem;
+    margin-left: 4.1rem;
+  }
+
+  &__content {
+    @include respond(tab-port-3) {
+      margin-top: 0;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////
+// MOBILE
+
+.header {
+  @include respond(tab-port-4) {
+    margin-top: 2.4rem;
+  }
+
+  &__logo-box {
+    @include respond(phone) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}

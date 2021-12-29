@@ -1,0 +1,11 @@
+.body--destination__flex {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 7.6rem;
+  // justify-content: space-between;
+  // TABLET
+  @include respond(tab-port-3) {
+    gap: 4rem;
+  }
+}

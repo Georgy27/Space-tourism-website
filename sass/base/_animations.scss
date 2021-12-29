@@ -1,0 +1,19 @@
+@keyframes white-circle-expanding {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.64); // to scale to 450 px
+    opacity: 0.1;
+  }
+}
+
+@keyframes white-circle-shrinking {
+  0% {
+    transform: scale(1.64);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

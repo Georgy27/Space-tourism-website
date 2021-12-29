@@ -1,0 +1,23 @@
+.body--technology {
+  background: url("/assets/technology/background-technology-desktop.jpg") center
+    top / cover no-repeat;
+}
+
+//////////////////////////////////////
+// TABLET
+
+.body--technology {
+  @include respond(tab-port-3) {
+    background: url("/assets/technology/background-technology-tablet.jpg")
+      center top / cover no-repeat;
+  }
+}
+
+//PHONE
+
+.body--technology {
+  @include respond(phone) {
+    background: url("/assets/technology/background-technology-mobile.jpg")
+      center center / cover no-repeat;
+  }
+}

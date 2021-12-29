@@ -1,0 +1,90 @@
+.main {
+  height: 38.2rem;
+  max-width: 45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__body-text {
+    max-width: 44.4rem;
+  }
+  @include respond(small-desktop) {
+    max-width: 45rem;
+  }
+
+  @include respond(big-desktop) {
+    max-width: 60rem;
+    gap: 3rem;
+  }
+
+  &__btn {
+    align-self: flex-end;
+
+    @include respond(tab-port-3) {
+      align-self: center;
+    }
+  }
+}
+
+.main-flex {
+  margin-left: 16.5rem;
+  margin-right: 16.5rem;
+  margin-bottom: 13.1rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// TABLET
+.main {
+  @include respond(tab-port-3) {
+    margin: 0 auto;
+    text-align: center;
+    height: 334px;
+
+    gap: 25px;
+  }
+
+  &__btn {
+    @include respond(tab-port-3) {
+      margin-top: 12rem;
+    }
+  }
+}
+
+.main-flex {
+  @include respond(tab-port-2) {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  @include respond(tab-port-3) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// PHONE
+
+.main {
+  @include respond(phone) {
+    max-width: 32.7rem;
+    height: 27.6rem;
+    gap: 16px;
+  }
+  &__btn {
+    @include respond(phone) {
+      margin-top: 8rem;
+    }
+  }
+}
+
+.main-flex {
+  @include respond(phone) {
+    margin: 0 auto;
+
+    max-width: 327px;
+    height: 507px;
+  }
+}

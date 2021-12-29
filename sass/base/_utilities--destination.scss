@@ -1,0 +1,21 @@
+.main--destination__description__item {
+  &:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  }
+}
+.main--destination--active {
+  border-bottom: 3px solid #fff;
+}
+
+.main--destination--active:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+.color--white {
+  color: $colorTertiary;
+}
+
+.main__body-text--destination {
+  @include respond(tab-port-3) {
+    max-width: 57.3rem;
+  }
+}

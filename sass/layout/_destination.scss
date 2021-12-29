@@ -1,0 +1,191 @@
+.main__heading {
+  margin-left: 35.5rem;
+  height: 3.4rem;
+
+  @include respond(small-desktop) {
+    margin-left: 16.5rem;
+  }
+
+  @include respond(tab-port-1) {
+    margin-left: 3.5rem;
+  }
+}
+
+.main--destination {
+  margin-top: 6.4rem;
+  max-width: 72.8%;
+  height: 47.8rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 34rem;
+  margin-bottom: 11.2rem;
+
+  @include respond(small-desktop) {
+    margin-left: 23rem;
+  }
+
+  @include respond(tab-port-1) {
+    margin-left: 10rem;
+  }
+  @include respond(mini-desktop) {
+    gap: 10rem;
+  }
+
+  &__heading__span {
+    display: inline-block;
+    height: 3.4rem;
+  }
+  &__planet {
+    display: inline-block;
+    width: 445px;
+    min-width: 293px;
+    height: 445px;
+    align-self: flex-end;
+
+    @include respond(tab-port-1) {
+      // min-width: 293px;
+    }
+  }
+  &__description {
+    max-width: 44.5rem;
+    height: 47.2rem;
+  }
+
+  &__description__list {
+    display: flex;
+    gap: 3.5rem;
+    width: 285.5px;
+    height: 34px;
+    margin-bottom: 3.7rem;
+  }
+
+  &__description__info {
+    border-top: 2px solid#383B4B;
+    display: flex;
+    gap: 7.9rem;
+    margin-top: 5.4rem;
+  }
+  &__description__info__numbers {
+    margin-top: 1.2rem;
+  }
+  &__description__info--1,
+  &__description__info--2 {
+    margin-top: 2.8rem;
+  }
+
+  &__body__text {
+    margin-top: 1.4rem;
+  }
+}
+
+///////////////////////////////////////////////////////
+// TABLET
+
+.main--destination {
+  @include respond(tab-port-3) {
+    max-width: 57.3rem;
+    height: 74.2rem;
+    margin: 0 auto;
+  }
+  @include respond(tab-port-4) {
+    // margin-left: 2.5rem;
+  }
+  @include respond(tab-port-3) {
+    margin-top: 6rem;
+    gap: 5.3rem;
+  }
+  @include respond(tab-port-3) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__planet {
+    @include respond(tab-port-3) {
+      align-self: center;
+      max-width: 30rem;
+      height: 30rem;
+    }
+  }
+
+  &__description {
+    @include respond(tab-port-3) {
+      text-align: center;
+      // display: flex;
+      max-width: 57.3rem;
+    }
+  }
+  &__description__info {
+    @include respond(tab-port-3) {
+      margin-top: 4.9rem;
+      justify-content: center;
+    }
+  }
+  &__description__list {
+    @include respond(tab-port-3) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__body__text {
+    @include respond(tab-port-3) {
+      max-width: 573px;
+      height: 84px;
+    }
+  }
+}
+
+.main--destination__heading {
+  @include respond(tab-port-3) {
+    margin-left: 3.85rem;
+    margin-bottom: 0;
+  }
+
+  &--1 {
+    @include respond(tab-port-3) {
+      margin-top: 3.2rem;
+    }
+  }
+}
+
+///////////////////////////////////////////////
+// PHONE
+.main__heading {
+  @include respond(phone) {
+    margin-left: 0;
+  }
+}
+.main--destination {
+  @include respond(phone) {
+    justify-content: flex-start;
+    max-width: 32.7rem;
+
+    margin-top: 3.2rem;
+    gap: 2.6rem;
+  }
+  &__planet {
+    @include respond(phone) {
+      min-width: 0;
+      width: 17rem;
+      height: 17rem;
+    }
+  }
+
+  &__description__info {
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
+
+  &__body__text {
+    @include respond(phone) {
+      height: 12.5rem;
+    }
+  }
+}
+
+.main--destination__heading {
+  @include respond(phone) {
+    margin-left: 7.75rem;
+  }
+}

@@ -1,0 +1,25 @@
+.body--crew {
+  background-color: #0b0d17;
+  background: url("/assets/crew/background-crew-desktop.jpg") center top / cover
+    no-repeat;
+}
+
+//////////////////////////////////////
+// TABLET
+
+.body--crew {
+  @include respond(tab-port-3) {
+    background: url("/assets/crew/background-crew-tablet.jpg") center top /
+      cover no-repeat;
+  }
+}
+
+//////////////////////////////////////
+// TABLET
+
+.body--crew {
+  @include respond(phone) {
+    background: url("/assets/crew/background-crew-mobile.jpg") center top /
+      cover no-repeat;
+  }
+}

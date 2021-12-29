@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+    <script defer src="navigation.js"></script>
+  </head>
+  <body class="body--destination">
+    <div class="body--destination__flex">
+      <header class="header">
+        <div class="header__content">
+          <div class="header__logo-box">
+            <img src="./assets/shared/logo.svg" alt="" class="header__logo" />
+          </div>
+          <nav class="navigation">
+            <button class="navigation__close--btn">
+              <img src="./assets/shared/icon-close.svg" alt="" />
+            </button>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="index.html" class="navigation__link"
+                  ><span class="navigation__span">00</span>Home</a
+                >
+              </li>
+              <li class="navigation__item active">
+                <a href="destination-moon.html" class="navigation__link"
+                  ><span class="navigation__span">01</span>Destination</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="crew-commander.html" class="navigation__link"
+                  ><span class="navigation__span">02</span>Crew</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a href="technology-vehicle.html" class="navigation__link"
+                  ><span class="navigation__span">03</span>Technology</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="navigation--burger">
+            <img src="./assets/shared/icon-hamburger.svg" alt="" />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main__heading">
+          <h1
+            class="main__heading--5 main--destination__heading--5 color--white"
+          >
+            <span class="main--destination__heading__span">01</span> Pick your
+            destination
+          </h1>
+        </div>
+        <div class="main--destination">
+          <div class="main--destination__planet">
+            <img src="assets/destination/image-mars.png" alt="" />
+          </div>
+          <div class="main--destination__description">
+            <ul class="main--destination__description__list">
+              <li class="main--destination__description__item">
+                <a
+                  href="destination-moon.html"
+                  class="main--destination__description__link"
+                  >Moon</a
+                >
+              </li>
+              <li
+                class="
+                  main--destination__description__item
+                  main--destination--active
+                "
+              >
+                <a
+                  href="destination-mars.html"
+                  class="main--destination__description__link color--white"
+                  >Mars</a
+                >
+              </li>
+              <li class="main--destination__description__item">
+                <a
+                  href="destination-europa.html"
+                  class="main--destination__description__link"
+                  >Europa</a
+                >
+              </li>
+              <li class="main--destination__description__item">
+                <a
+                  href="destination-titan.html"
+                  class="main--destination__description__link"
+                  >Titan</a
+                >
+              </li>
+            </ul>
+            <span class="main__heading--1 main--destination__heading--1"
+              >mars</span
+            >
+            <p class="main__body-text main__body-text--destination">
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </p>
+            <div class="main--destination__description__info">
+              <div class="main--destination__description__info--1">
+                <span class="main--destination__description__info__text"
+                  >Avg. distance</span
+                >
+                <p class="main--destination__description__info__numbers">
+                  225 mil. km
+                </p>
+              </div>
+              <div class="main--destination__description__info--2">
+                <span class="main--destination__description__info__text"
+                  >Est. travel time</span
+                >
+                <p class="main--destination__description__info__numbers">
+                  9 months
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
